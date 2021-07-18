@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="background">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Footballscout</title>
+</head>
+<body>
+    <a href="index.html"><img id="homeb" src="homebutton.png" alt="homebutt"></a>
+    <a href="aboutme.html"><img id="aboutus" src="about.png" alt="aboutus"></a>
+    <div>
+        <h1 id="heading">Football Scout</h1>
+        <p id="para">Feel free to leave any comments suggesting specific players or just even feedback to help us and the community create a larger database for all football fans so we can build something great together! We are also in partnership with the grassroots project to supply all children with an equal opportunity to showcase themselves and enjoy the beautiful game that is football, we've included a link to the foundation within the logo underneath.</p>
+    </div>
+
+    <div>
+        <div class="grass">
+        <a href="http://grassrootsfa.com/about-gfa">
+            <img src="grassroots.png" href="http://grassrootsfa.com/about-gfa" alt="grassroo">
+        </a>
+        </div>
+    </div>
+    
+    <section id="app">
+        <div class="container">
+          <div class="row">
+            <div class="col-6">
+              <div class="comment">
+            <p v-for="items in item" v-text="items"></p>
+              </div><!--End Comment-->
+              </div><!--End col -->
+              </div><!-- End row -->
+          <div class="row">
+            <div class="col-6">
+          <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+              <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+            </div><!-- End col -->
+          </div><!--End Row -->
+        </div><!--End Container -->
+      </section><!-- end App -->
+    
+</body>
+</html>
